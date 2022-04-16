@@ -2,7 +2,7 @@
 
 pipeline {
     agent {
-        label joyCommonLabels(image_ver: '21.4.0', pi:'20210826T002459Z'
+        label joyCommonLabels(platform: true, image_ver: '21.4.0', pi:'20210826T002459Z'
         )
     }
 
