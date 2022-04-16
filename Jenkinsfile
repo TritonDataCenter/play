@@ -22,7 +22,7 @@ pipeline {
     post {
         always {
             joySlackNotifications(channel: 'jenkins', comment: 'play message')
-            joySlackNotifications(channel: 'smartos', comment: 'play message')
+            slackSend(channel: 'smartos', comment: 'play message')
         }
     }
 }
