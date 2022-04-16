@@ -1,8 +1,9 @@
-@Library('jenkins-joylib@v1.0.1') _
+@Library('jenkins-joylib@v1.0.8') _
 
 pipeline {
     agent {
-        label joyCommonLabels(image_ver: '18.4.0')
+        label joyCommonLabels(image_ver: '21.4.0', pi:'20210826T002459Z'
+        )
     }
 
     options {
@@ -20,7 +21,8 @@ pipeline {
 
     post {
         always {
-            joyMattermostNotification(channel: 'jenkins')
+            joySlackNotifications(channel: 'jenkins', comment: 'play message')
+            joySlackNotifications(channel: 'smartos', comment: 'play message')
         }
     }
 }
