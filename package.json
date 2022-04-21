@@ -1,7 +1,7 @@
 {
   "name": "play",
   "version": "1.0.0",
-  "description": "joyent eng play repo",
+  "description": "triton eng play repo",
   "main": "lib/play.js",
   "private": true,
   "repository": {
