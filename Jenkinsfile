@@ -6,7 +6,7 @@
 
 /*
  * Copyright 2022 Joyent, Inc.
- * Copyright 2022 MNX Cloud, Inc.
+ * Copyright 2025 MNX Cloud, Inc.
  */
 
 @Library('jenkins-joylib@v1.0.8') _
@@ -45,7 +45,7 @@ make print-STAMP
 
     post {
         always {
-            joySlackNotifications(channel: 'jenkins')
+            joySlackNotifications()
         }
     }
 }
